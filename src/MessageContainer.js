@@ -147,22 +147,24 @@ export default class MessageContainer extends React.Component {
       ? {}
       : styles.notInvertedContentContainerStyle;
 
-    return (
-      <View style={styles.container}>
-        <ListView
-          enableEmptySections
-          automaticallyAdjustContentInsets={false}
-          initialListSize={20}
-          pageSize={20}
-          {...this.props.listViewProps}
-          dataSource={this.state.dataSource}
-          contentContainerStyle={contentContainerStyle}
-          renderRow={this.renderRow}
-          renderHeader={this.props.inverted ? this.renderFooter : this.renderLoadEarlier}
-          renderFooter={this.props.inverted ? this.renderLoadEarlier : this.renderFooter}
-          renderScrollComponent={this.renderScrollComponent}
-        />
-      </View>
+    return ( 
+      <ScrollView keyboardDismissMode="interactive">
+        <View style={styles.container}>
+          <ListView
+            enableEmptySections
+            automaticallyAdjustContentInsets={false}
+            initialListSize={20}
+            pageSize={20}
+            {...this.props.listViewProps}
+            dataSource={this.state.dataSource}
+            contentContainerStyle={contentContainerStyle}
+            renderRow={this.renderRow}
+            renderHeader={this.props.inverted ? this.renderFooter : this.renderLoadEarlier}
+            renderFooter={this.props.inverted ? this.renderLoadEarlier : this.renderFooter}
+            renderScrollComponent={this.renderScrollComponent}
+          />
+        </View>
+      </ScrollView>
     );
   }
 
