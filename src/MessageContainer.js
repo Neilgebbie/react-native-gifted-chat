@@ -149,7 +149,6 @@ export default class MessageContainer extends React.Component {
 
     return ( 
       <ScrollView keyboardDismissMode="on-drag" style={{backgroundColor: 'red'}}>
-        <View style={[styles.container, {backgroundColor: 'orange'}]}>
           <ListView
             enableEmptySections
             automaticallyAdjustContentInsets={false}
@@ -163,7 +162,6 @@ export default class MessageContainer extends React.Component {
             renderFooter={this.props.inverted ? this.renderLoadEarlier : this.renderFooter}
             renderScrollComponent={this.renderScrollComponent}
           />
-        </View>
       </ScrollView>
     );
   }
