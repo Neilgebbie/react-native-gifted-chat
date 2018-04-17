@@ -148,7 +148,7 @@ export default class MessageContainer extends React.Component {
       : styles.notInvertedContentContainerStyle;
 
     return ( 
-      <ScrollView keyboardDismissMode="on-drag">
+      <ScrollView keyboardDismissMode="on-drag" style={[styles.container, {backgroundColor: 'red'}]}>
         <View style={styles.container}>
           <ListView
             enableEmptySections
