@@ -170,9 +170,7 @@ export default class MessageContainer extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#123122',
-    justifyContent: 'flex-start',
+    flex: 1
   },
   notInvertedContentContainerStyle: {
     justifyContent: 'flex-end',
