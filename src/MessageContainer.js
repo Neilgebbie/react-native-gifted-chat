@@ -148,7 +148,7 @@ export default class MessageContainer extends React.Component {
       : styles.notInvertedContentContainerStyle;
 
     return ( 
-      <ScrollView keyboardDismissMode="on-drag" style={{backgroundColor: 'red'}}>
+      <ScrollView keyboardDismissMode="on-drag" style={styles.container}>
           <ListView
             enableEmptySections
             automaticallyAdjustContentInsets={false}
@@ -171,6 +171,8 @@ export default class MessageContainer extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'orange',
+    justifyContent: 'flex-start'
   },
   notInvertedContentContainerStyle: {
     justifyContent: 'flex-end',
